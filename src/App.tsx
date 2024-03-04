@@ -41,6 +41,10 @@ function App() {
                       <li>Plan meeting times with our <a href="#calendar"><span>Calendar</span></a>!</li>
                       <li>Create your own personalized <a href="#to-do"><span>To-Do</span></a> list!</li>
                     </ol>
+                    <div className="sign-buttons">
+                      <button className="sign-in">Sign-In</button>
+                      <button className="sign-up">Sign-Up</button>
+                    </div>
                   </p>
               
             </div>
