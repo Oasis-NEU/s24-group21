@@ -1,29 +1,22 @@
 html{
-  
   scroll-behavior: smooth;
-
 }
 
 body{
-
   background-color: #000000;
   color: white;
   font-family: 'Poppins', sans-serif;
   align-items: center;
   flex-direction: column;
-
 }
 
 #root{
-  
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  
-  
 }
 
 
@@ -36,7 +29,6 @@ body{
 }
 
 .nav-bar{
-  
   padding: 12px 2%;
   background-color: #5271FF;
 }
@@ -82,112 +74,108 @@ nav ul li a:hover::after{
 }
 
 .row{
-
   margin-top: 2%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .home-left{
-
   padding: 5%;
   flex-basis: 40%;
-
 }
 
 .sub-title{
-
   font-size: 60px;
   font-weight: 600;
   color: #fff;
-
 }
 
 .home-left p ol li{
-
   font-size: 30px;
   font-weight: 100;
   list-style-position: outside;
-  
-
 }
 
 .sub-title span{
-
-    color: #5271FF;
-    font-family: 'Marker Felt', fantasy;
-
+  color: #5271FF;
+  font-family: 'Marker Felt', fantasy;
 }
 
 .home-left p ol li span{
-
   color: #A2BFFF;
-
 }
 
 .sign-buttons{
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .sign-in{
-
   width: 100px;
   display: inline-block;
   background: #5271FF;
   margin-top: 10px;
   margin-bottom: 20px;
-
 }
 
 .sign-up{
-
   width: 100px;
   display: inline-block;
   background: #5271FF;
-
 }
 
 .home-right{
-
   padding-right: 5%;
   flex-basis: 40%;
-
 }
 
 .home-right img{
-
-    width: 90%;
-    
-
+  width: 90%;
 }
 
-
-
-
 #partnerForm{
-
   width: 100%;
   height: 100%;
   background-color: black;
   background-size: cover;
-  background-position: center;
-
+  background-position: center; 
 }
 
+.formHeaders{
+  color: #A2BFFF;
+  background-color: black;
+}
 
+.flexOptions {
+  background-color: black;
+  display: flex;
+}
+
+.options input[type="radio"] {
+  background-color: black;
+  margin-right: 5px; 
+}
+
+.options {
+  background-color: black;
+  margin-bottom: 1px; 
+}
+
+.options input[type="radio"] {
+  background-color: black;
+  margin-right: 0px; 
+}
 
 .container{
+  background-color: black;
   padding: 5%;
   margin-left:auto; 
 }
 
 .submit-button{
+  background-color: black;
   display: inline-block;
   background: #5271FF;
 }

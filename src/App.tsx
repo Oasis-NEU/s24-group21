@@ -1,24 +1,21 @@
-//import { useState } from 'react'
-import './App.css'
-import partnerForm from './partnerForm';
-import React from 'react';
+import './App.css';
+import Calendar from './Calendar';
+import Register from './register';
+import PartnerForm from './partnerForm';
 
 function App() {
 
   return (
     <>
-      <head id="root">
+    <Register/>
+      {/* <head id="root">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Group Project Hub</title>
-
       </head>
-
       <body>
       <div id="root">
-        
         <div id="home">
-
           <div className="nav-bar">
             <nav>
                 <a href="#home"><img src="public/Oasis Logo.png" className="logo"></img></a>
@@ -32,9 +29,7 @@ function App() {
           </div>
 
           <div className="row">
-
             <div className="home-left">
-              
                   <h1 className="sub-title">Welcome to the <br></br><span>Group Project Hub!</span></h1>
                   <p>
                     <ol>
@@ -47,283 +42,15 @@ function App() {
                       <button className="sign-up">Sign-Up</button>
                     </div>
                   </p>
-              
             </div>
-            
             <div className="home-right">
               <img src="public\Oasis Logo.png"></img>
             </div>
-
           </div>
         </div>
-
-
-      </div> 
-
-      <div><partnerForm/></div>
-      
-      <div id="calendar">
-
-        <div className="container">
-
-          <h1 className="calendar-title">Calendar</h1>
-
-          <table>
-            <tr>
-              <th></th>
-              <th>Sunday</th>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th>Saturday</th>
-            </tr>
-            <tr>
-              <td>12:00-1:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>1:00-2:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>2:00-3:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>3:00-4:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>4:00-5:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>5:00-6:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>6:00-7:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>7:00-8:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>8:00-9:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>9:00-10:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-            <td>10:00-11:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>11:00-12:00 am</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>12:00-1:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>1:00-2:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>2:00-3:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>3:00-4:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>4:00-5:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>5:00-6:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>6:00-7:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>7:00-8:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>8:00-9:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>9:00-10:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>10:00-11:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <td>11:00-12:00 pm</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-              <td>%</td>
-            </tr>
-        </table>
-
-        </div>
-
       </div>
+
+      
 
 
       <div id="myProfile">
@@ -336,10 +63,7 @@ function App() {
 
       </div>
 
-
-
-
-      </body>
+      </body> */}
     </>
   )
 }
