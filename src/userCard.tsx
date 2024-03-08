@@ -13,6 +13,7 @@ const UserCard = ({user, select}: UserProps) => {
                 <h2>{user.name}</h2>
                 <h3>{user.email}</h3>
                 <h3>Compatability Score: {user.score}</h3>
+                <h5>Number of people already in their group: {user.peopleInGroup}</h5>
                 <button onClick={() => select(user)}>
                     <img
                         src={blueCheck}

@@ -16,7 +16,8 @@ const CompatabilityPage: FunctionComponent<SessionUserProps> = ({user}) => {
             setMyUser(data.filter(u => u.user_id == user.id)[0]);
             let usersWithScore = data.map((user: UserObj) => (
                 {...user,
-                score: calculateScore(user)}
+                score: calculateScore(user),
+                peopleInGroup: calculateGroupCount(user, data)}
             ))
             usersWithScore = usersWithScore.filter(u => u.user_id != user.id)
             setUsers(handleSort(usersWithScore))
@@ -27,6 +28,10 @@ const CompatabilityPage: FunctionComponent<SessionUserProps> = ({user}) => {
 
     function calculateScore(user: UserObj) {
         return 25;
+    }
+
+    function calculateGroupCount(user: UserObj, users: any[]) {
+        return users.filter(u => u.group_id == user.group_id).length;
     }
 
     function handleSort (users: any, sortOrder=1) {
