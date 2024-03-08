@@ -35,6 +35,7 @@ export type Database = {
           subject_id: string
           user_id: string
           virtual_inPerson: string
+          rank: number | null 
         }
         Insert: {
           divide_together: string
