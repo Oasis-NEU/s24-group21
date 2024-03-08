@@ -2,13 +2,10 @@ import React, { useRef, useState, useEffect, FunctionComponent } from "react";
 import './App.css';
 import { supabase } from "./supabase";
 import { Database, Tables, Enums } from "./supabase-types";
-import { User } from "@supabase/gotrue-js/src/lib/types"
+import { UserObj, SessionUserProps } from "./types";
+import CompatabilityPage from "./CompatabilityPage";
 
-interface partnerProps {
-    user: User
-}
-
-const PartnerForm: FunctionComponent<partnerProps> = ({user}) => {
+const PartnerForm: FunctionComponent<SessionUserProps> = ({user}) => {
     const[subjects, setSubjects] = useState<Tables<"subjects">[]>([]);
     useEffect(() => {
         getSubjects();
@@ -43,7 +40,7 @@ const PartnerForm: FunctionComponent<partnerProps> = ({user}) => {
         divide_together: getRadioVal(divideTogetherRef, "divide_together"), 
         virtual_inPerson: getRadioVal(virtualInpersonRef, "virtual_inperson"), 
         experience: parseInt(getRadioVal(experienceRef, "experience")),
-        subject_id: subId, group_id: null};
+        subject_id: subId, group_id: null, rank: null};
         const res = await supabase
         .from("users")
         .insert(newUser)
@@ -72,11 +69,11 @@ const PartnerForm: FunctionComponent<partnerProps> = ({user}) => {
             e.stopPropagation();
             return;
         }
-        // Get message value, save message and reset the form
         saveForm();
         form.reset();
         form.classList.remove('was-validated');
     }
+    console.log(userExists);
     if(!userExists) {
         return (
             <div id="partnerForm">
@@ -134,8 +131,9 @@ const PartnerForm: FunctionComponent<partnerProps> = ({user}) => {
             </div>
         );
     } else {
-        return <div></div>
-        //<CompatabilityPage/>
+        return (
+            <div><CompatabilityPage user={user}/></div>
+        );
     }
 }
 
