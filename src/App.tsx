@@ -7,8 +7,7 @@ function App() {
 
   return (
     <>
-    <Register/>
-      {/* <head id="root">
+      <head id="root">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Group Project Hub</title>
@@ -49,10 +48,8 @@ function App() {
           </div>
         </div>
       </div>
-
+      <Register/>
       
-
-
       <div id="myProfile">
 
         <div className="container">
@@ -63,7 +60,7 @@ function App() {
 
       </div>
 
-      </body> */}
+      </body>
     </>
   )
 }
