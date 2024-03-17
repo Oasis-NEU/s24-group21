@@ -11,7 +11,6 @@ const Register: FunctionComponent = () => {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
-      console.log(session);
     })
 
     const {
@@ -23,7 +22,7 @@ const Register: FunctionComponent = () => {
   }, [])
 
   if (!session) {
-    return (<Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />)
+    return (<Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} providers={[]}/>)
   } else {
     return (<PartnerForm user = {session.user}/>)
   }
