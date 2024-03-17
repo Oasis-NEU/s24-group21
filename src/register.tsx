@@ -23,7 +23,7 @@ const Register: FunctionComponent = () => {
   }, [])
 
   if (!session) {
-    return (<Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />)
+    return (<Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} providers={[]}/>)
   } else {
     return (<PartnerForm user = {session.user}/>)
   }
