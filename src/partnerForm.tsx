@@ -6,6 +6,11 @@ import { UserObj, SessionUserProps } from "./types";
 import CompatabilityPage from "./CompatabilityPage";
 
 const PartnerForm: FunctionComponent<SessionUserProps> = ({user}) => {
+
+    const logOut = () => {
+        supabase.auth.signOut();
+    }
+
     const[subjects, setSubjects] = useState<Tables<"subjects">[]>([]);
     useEffect(() => {
         getSubjects();
@@ -77,6 +82,7 @@ const PartnerForm: FunctionComponent<SessionUserProps> = ({user}) => {
     if(!userExists) {
         return (
             <div id="partnerForm">
+                <button onClick={(e) => logOut(e)}>Logout</button>
                 <div className="container">
                     <h1 className="sub-title">Partner Form</h1>
                     <form id="form" onSubmit={handleSubmit}>
